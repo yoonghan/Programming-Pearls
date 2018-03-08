@@ -2,14 +2,55 @@
 [0m[[0mdebug[0m] [0m[naha] Initial source changes: [0m
 [0m[[0mdebug[0m] [0m[naha] 	removed:Set()[0m
 [0m[[0mdebug[0m] [0m[naha] 	added: Set()[0m
-[0m[[0mdebug[0m] [0m[naha] 	modified: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	modified: Set(/Users/mmpkl05/personal/scala/programming_pearls/src/main/scala/etc/BinarySearch.scala)[0m
 [0m[[0mdebug[0m] [0m[naha] Invalidated products: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] External API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] Modified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0m[naha] Initial directly invalidated sources: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] Initial directly invalidated sources: Set(/Users/mmpkl05/personal/scala/programming_pearls/src/main/scala/etc/BinarySearch.scala)[0m
 [0m[[0mdebug[0m] [0m[naha] [0m
 [0m[[0mdebug[0m] [0m[naha] Sources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m[naha] 	product: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] 	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] 	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/mmpkl05/personal/scala/programming_pearls/src/main/scala/etc/BinarySearch.scala)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /Users/mmpkl05/personal/scala/programming_pearls/target/scala-2.11/classes...[0m
+[0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.11:component from component compiler for Scala 2.11.8[0m
+[0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.11:component from component compiler for Scala 2.11.8[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 7ddb244c, interfacing (CompilerInterface) with Scala compiler version 2.11.8[0m
+[0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
+[0m[[0mdebug[0m] [0m	-bootclasspath[0m
+[0m[[0mdebug[0m] [0m	/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/classes:/Users/mmpkl05/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar[0m
+[0m[[0mdebug[0m] [0m	-classpath[0m
+[0m[[0mdebug[0m] [0m	/Users/mmpkl05/personal/scala/programming_pearls/target/scala-2.11/classes[0m
+[0m[[31merror[0m] [0m/Users/mmpkl05/personal/scala/programming_pearls/src/main/scala/etc/BinarySearch.scala:51: inferred type arguments [Int] do not conform to method binarySearchWithImplicitConversion's type parameter bounds [T <: Numeric[T]][0m
+[0m[[31merror[0m] [0m      val result10 = binarySearchWithImplicitConversion(sortedArray, 5)[0m
+[0m[[31merror[0m] [0m                     ^[0m
+[0m[[31merror[0m] [0m/Users/mmpkl05/personal/scala/programming_pearls/src/main/scala/etc/BinarySearch.scala:51: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : Array[Int][0m
+[0m[[31merror[0m] [0m required: Array[T][0m
+[0m[[31merror[0m] [0m      val result10 = binarySearchWithImplicitConversion(sortedArray, 5)[0m
+[0m[[31merror[0m] [0m                                                        ^[0m
+[0m[[31merror[0m] [0m/Users/mmpkl05/personal/scala/programming_pearls/src/main/scala/etc/BinarySearch.scala:51: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : Int(5)[0m
+[0m[[31merror[0m] [0m required: T[0m
+[0m[[31merror[0m] [0m      val result10 = binarySearchWithImplicitConversion(sortedArray, 5)[0m
+[0m[[31merror[0m] [0m                                                                     ^[0m
+[0m[[31merror[0m] [0m/Users/mmpkl05/personal/scala/programming_pearls/src/main/scala/etc/BinarySearch.scala:52: inferred type arguments [Int] do not conform to method binarySearchWithImplicitConversion's type parameter bounds [T <: Numeric[T]][0m
+[0m[[31merror[0m] [0m      val result11 = binarySearchWithImplicitConversion(sortedArray, 19)[0m
+[0m[[31merror[0m] [0m                     ^[0m
+[0m[[31merror[0m] [0m/Users/mmpkl05/personal/scala/programming_pearls/src/main/scala/etc/BinarySearch.scala:52: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : Array[Int][0m
+[0m[[31merror[0m] [0m required: Array[T][0m
+[0m[[31merror[0m] [0m      val result11 = binarySearchWithImplicitConversion(sortedArray, 19)[0m
+[0m[[31merror[0m] [0m                                                        ^[0m
+[0m[[31merror[0m] [0m/Users/mmpkl05/personal/scala/programming_pearls/src/main/scala/etc/BinarySearch.scala:52: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : Int(19)[0m
+[0m[[31merror[0m] [0m required: T[0m
+[0m[[31merror[0m] [0m      val result11 = binarySearchWithImplicitConversion(sortedArray, 19)[0m
+[0m[[31merror[0m] [0m                                                                     ^[0m
+[0m[[31merror[0m] [0m/Users/mmpkl05/personal/scala/programming_pearls/src/main/scala/etc/BinarySearch.scala:98: value > is not a member of type parameter T[0m
+[0m[[31merror[0m] [0m      else if(valueToBeSearch > curr) {[0m
+[0m[[31merror[0m] [0m                              ^[0m
+[0m[[31merror[0m] [0m7 errors found[0m
+[0m[[0mdebug[0m] [0mCompilation failed (CompilerInterface)[0m
+[0m[[31merror[0m] [0m(compile:[31mcompileIncremental[0m) Compilation failed[0m
