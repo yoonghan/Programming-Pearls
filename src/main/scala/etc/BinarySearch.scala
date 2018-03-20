@@ -1,3 +1,5 @@
+package com.walcron.etc
+
 import scala.collection.Searching._
 import _root_.scala.collection.JavaConversions._
 import java.util.{Collections, List => JList}
@@ -56,16 +58,16 @@ object BinarySearch {
     }
   }
 
-  /*def sortList(list:Array[Int]):Array[Int] = {
+  /*def sortList(sortedArray:Array[Int]):Array[Int] = {
     import com.walcron.etc.Quicksort._
-    quickSort(list)
+    sort(sortedArray)
   }*/
 
-  //def binarySearch[T <% Ordered[T]](list:Array[T], valueToBeSearch:T)(implicit t:ClassTag[T]):Int =  {
-  def binarySearch(list:Array[Int], valueToBeSearch:Int):Int =  {
+
+  def binarySearchIntOnly(sortedArray:Array[Int], valueToBeSearch:Int):Int =  {
     def search(start:Int, end:Int):Int = {
       val pos = ((end - start) / 2) + start
-      val curr = list(pos)
+      val curr = sortedArray(pos)
 
       if(curr == valueToBeSearch) {
         pos
@@ -81,13 +83,14 @@ object BinarySearch {
       }
     }
 
-    search(0, list.length)
+    search(0, sortedArray.length)
   }
 
-  def binarySearchWithImplicitConversion[T <% Ordered[T]](list:Array[T], valueToBeSearch:T):Int =  {
+  //def binarySearch[T <% Ordered[T]](sortedArray:Array[T], valueToBeSearch:T)(implicit t:ClassTag[T]):Int =  {
+  def binarySearchWithImplicitConversion[T <% Ordered[T]](sortedArray:Array[T], valueToBeSearch:T):Int =  {
     def search(start:Int, end:Int):Int = {
       val pos = ((end - start) / 2) + start
-      val curr = list(pos)
+      val curr = sortedArray(pos)
 
       if(curr == valueToBeSearch) {
         pos
@@ -103,6 +106,29 @@ object BinarySearch {
       }
     }
 
-    search(0, list.length)
+    search(0, sortedArray.length)
+  }
+
+  def binarySearch[T: Ordering](sortedArray:Array[T], valueToBeSearch:T):Int =  {
+    import Ordering.Implicits._
+    def search(start:Int, end:Int):Int = {
+      val pos = ((end - start) / 2) + start
+      val curr = sortedArray(pos)
+
+      if(curr == valueToBeSearch) {
+        pos
+      }
+      else if((end - start) <= 1) {
+        -1 * (pos + 1) // Indicates the value should be inserted
+      }
+      else if(valueToBeSearch > curr) {
+        search(pos, end)
+      }
+      else {
+        search(start, pos)
+      }
+    }
+
+    search(0, sortedArray.length)
   }
 }

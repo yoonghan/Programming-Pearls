@@ -113,13 +113,13 @@ object Main {
 
   def sortCollection(collection: Array[String]):Array[String] = {
     import com.walcron.etc.Quicksort._
-    quickSort(collection)
+    sort(collection)
   }
 
   def signWords(input:String):String = {
     import com.walcron.etc.Quicksort._
     val strBuilder = new StringBuilder()
-    strBuilder.append(quickSort(input.toCharArray).mkString)
+    strBuilder.append(sort(input.toCharArray).mkString)
     strBuilder.append(" ")
     strBuilder.append(input)
     val combineSignedAndWord = strBuilder.toString
